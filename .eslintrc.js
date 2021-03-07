@@ -1,28 +1,25 @@
 module.exports = {
-    "env": {
-        "es6": true,
-        "node": true
+    env: {
+        es6: true,
+        node: true
     },
-    "extends": [
+    extends: [
         "plugin:react/recommended",
         "plugin:react-hooks/recommended",
     ],
-    "parserOptions": {
-        "ecmaVersion": 2020,
-        "sourceType": "module",
-        "ecmaFeatures": {
-            "jsx": true
+    parserOptions: {
+        ecmaVersion: 2020,
+        sourceType: "module",
+        ecmaFeatures: {
+            jsx: true
         }
     },
-    "settings": {
-        "react": {
-            "version": "detect" // Tells eslint-plugin-react to automatically detect the version of React to use
+    settings: {
+        react: {
+            version: "detect" // Tells eslint-plugin-react to automatically detect the version of React to use
         }
     },
-    "plugins": [
-        "jsdoc"
-    ],
-    "rules": {
+    rules: {
         "arrow-body-style": "off",
         "arrow-parens": [
             "off",
@@ -31,7 +28,7 @@ module.exports = {
         "brace-style": [
             "error",
             "allman",
-            {"allowSingleLine": true}
+            {allowSingleLine: true}
         ],
         "camelcase": "off",
         "comma-dangle": "off",
@@ -75,7 +72,7 @@ module.exports = {
         "no-shadow": [
             "error",
             {
-                "hoist": "all"
+                hoist: "all"
             }
         ],
         "no-throw-literal": "error",
@@ -98,21 +95,22 @@ module.exports = {
         "space-before-function-paren": [
             "error",
             {
-                "anonymous": "never",
-                "asyncArrow": "always",
-                "named": "never"
+                anonymous: "never",
+                asyncArrow: "always",
+                named: "never"
             }
         ],
         "spaced-comment": [
             "error",
             "always",
             {
-                "markers": [
+                markers: [
                     "/"
                 ]
             }
         ],
         "use-isnan": "error",
-        "valid-typeof": "off"
+        "valid-typeof": "off",
+        "react/prop-types": "off"
     }
 };

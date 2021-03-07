@@ -1,13 +1,21 @@
-import './App.css';
 import 'bulma';
+import './App.css';
+import React from 'react';
 
-import logo from './logo.svg';
+import {Hero} from './components/Hero';
+import {Invite} from './components/Invite';
+import {Location} from './components/Location';
+import {Accomodation} from './components/Accomodation';
+import {Footer} from './components/Footer';
 
 function App()
 {
     return (<div className='App'>
-        <header className='header'></header>
-
+        <Hero />
+        <Invite />
+        <Location />
+        <Accomodation />
+        <Footer />
     </div>);
 }
 
