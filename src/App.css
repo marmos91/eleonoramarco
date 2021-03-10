@@ -1,60 +1,8 @@
-.hero
-{
-  background-size: cover;
-  background-position: 50%;
-  background-repeat: no-repeat;
+@import url("https://fonts.googleapis.com/css?family=Satisfy");
+html {
+    scroll-behavior: smooth;
 }
 
-.hero:after
-{
-  position: absolute;
-  content: "";
-  top: 0;
-  right: 0;
-  bottom: 0;
-  left: 0;
-  background: -webkit-gradient(linear,left top,right bottom,from(#ffbc8c),to(#599eed));
-  background: -webkit-linear-gradient(top left,#ffbc8c,#599eed);
-  background: -o-linear-gradient(top left,#ffbc8c,#599eed);
-  background: linear-gradient(to bottom right,#ffbc8c,#599eed);
-  mix-blend-mode: multiply;
-}
-
-.hero-body
-{
-  position: relative;
-  z-index: 5;
-}
-
-.hero-body .columns
-{
-  width: 100%;
-  margin-top: auto;
-  padding: 0 6rem;
-}
-
-.divider
-{
-  background-color: tomato;
-  height: 10rem;
-}
-
-.divider .container
-{
-  display: flex;
-  flex-direction: column;
-  height: 100%;
-}
-
-.container .title
-{
-  text-align: center;
-  margin: auto;
-}
-
-@media screen and (min-width: 1408px)
-{
-  .container {
-      max-width: 1344px;
-  }
+.fa {
+    font-size: 50px;
 }

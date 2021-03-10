@@ -1,0 +1,8 @@
+.rsvp {
+    position: relative;
+}
+
+.rsvp .title {
+    font-family: 'Satisfy', cursive;
+    font-size: 5rem;
+}
