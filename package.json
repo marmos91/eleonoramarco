@@ -2,6 +2,7 @@
   "name": "eleomarco-js",
   "version": "0.1.0",
   "private": true,
+  "homepage": "http://marmos91.github.io/eleonoramarco",
   "dependencies": {
     "bulma": "^0.9.2",
     "node-sass": "^5.0.0",
@@ -15,7 +16,9 @@
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build"
   },
   "browserslist": {
     "production": [
