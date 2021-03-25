@@ -18,6 +18,7 @@ const StyledAccomodationCard = styled.div`
         padding: 1rem;
         font-family: 'Libre Baskerville', serif;
         font-size: .8rem;
+        line-height: 1.2rem;
     }
 `;
 

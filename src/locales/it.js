@@ -17,7 +17,7 @@ export default {
             subtitle: '06 Giugno 2021 - Antica Pieve di Roffeno'
         },
         location: {
-            paragraph: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque pharetra commodo viverra. Proin condimentum facilisis nibh eget ullamcorper. Sed dapibus nisi vel nisi vehicula consequat. Nulla congue eget eros non maximus.',
+            paragraph: 'La montagna ha sempre fatto delle nostre passioni. Per questo abbiamo deciso di celebrare le nozze e di festeggiare insieme sulle montagne dell\'appennino Bolognese, a pochi chilometri da Vergato.',
             cerimony: {
                 title: 'Cerimonia',
                 location: 'Antica Pieve di Roffeno',
@@ -38,16 +38,16 @@ export default {
             locations: {
                 falco: {
                     title: 'Hotel Falco D\'Oro',
-                    description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.'
+                    description: 'Ampio hotel attrezzato a soli 14 minuti dalla location della cerimonia. Offre molte stanze, colazione e altri servizi. Gli sposi alloggerano qui'
                 },
                 piana: {
                     title: 'Piana Dei Castagni',
-                    description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.'
+                    description: 'Un agriturismo in mezzo alla natura che offre poche camere in stile Bed and Breakfast a pochi chilometri dal luogo della cerimonia.'
                 }
             }
         },
         rsvp: {
-            title: 'rsvp',
+            title: 'rsvp (coming soon)',
             paragraph: 'Non vediamo l’ora di festeggiare insieme a voi! Fateci sapere se riuscirete ad esserci.',
             input: 'Nome e cognome',
             email: 'email',
