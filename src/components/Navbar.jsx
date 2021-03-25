@@ -1,7 +1,8 @@
-import React, {useContext} from "react";
+import React from "react";
 import {useTranslation} from "react-i18next";
 import styled from "styled-components";
 import {MobileNavbar} from "./MobileNavbar";
+import {DesktopNavbar} from "./DesktopNavbar";
 
 const Nav = styled.div`
     display: flex;
@@ -32,7 +33,7 @@ export const Navbar = (props) =>
     }];
 
     return (<Nav>
-        {/* <DesktopNav /> */}
+        <DesktopNavbar {...props} links={links} />
         <MobileNavbar {...props} links={links} />
     </Nav>);
 }
