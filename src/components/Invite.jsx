@@ -9,6 +9,10 @@ const InviteSection = styled.section`
     display: flex;
     flex-direction: column;
 
+    ${media.desktop`
+        padding: 4rem 1.8rem;
+    `}
+
     h1 {
         font-family: 'Lato', sans-serif;
         text-transform: uppercase;
@@ -24,6 +28,11 @@ const InviteSection = styled.section`
             font-size: 1.8rem;
             line-height: 2rem;
         `}
+
+        ${media.desktop`
+            font-size: 2rem;
+            line-height: 2rem;
+        `}
     }
 `;
 
@@ -36,6 +45,10 @@ const InviteGrid = styled.div`
         column-gap: 3rem;
 
         margin: 4rem 2rem;
+
+        ${media.desktop`
+            margin: 4rem;
+        `}
     `}
 
     img {
@@ -46,6 +59,10 @@ const InviteGrid = styled.div`
 
         ${media.tablet`
             display: block;
+        `}
+
+        ${media.desktop`
+            width: 25rem;
         `}
     }
 

@@ -14,6 +14,10 @@ const AccomodationSection = styled.section`
         padding: 2.5rem 0;
     `}
 
+    ${media.desktop`
+        padding: 4.5rem 1.5rem;
+    `}
+
     h1 {
         font-family: 'Lato', sans-serif;
         text-transform: uppercase;
@@ -21,6 +25,11 @@ const AccomodationSection = styled.section`
         line-height: 1.6rem;
         font-weight: 300;
         text-align: center;
+
+        ${media.desktop`
+            font-size: 2rem;
+            line-height: 2rem;
+        `}
     }
 `;
 

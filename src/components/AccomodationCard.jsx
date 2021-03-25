@@ -12,6 +12,10 @@ const StyledAccomodationCard = styled.div`
         margin: auto;
     `}
 
+    ${media.tablet`
+        margin: auto;
+    `}
+
     h1 {
         align-self: start;
         text-align: left !important;
@@ -24,8 +28,13 @@ const StyledAccomodationCard = styled.div`
 
         ${media.tablet`
             font-size: 1.2rem;
-            font-weight: 400;
+            font-weight: 200;
             padding: 1.5rem .5rem 0 .5rem;
+        `}
+
+        ${media.desktop`
+            font-size: 1.7rem;
+            line-height: 2rem;
         `}
     }
 
@@ -51,6 +60,11 @@ const AccomodationImage = styled.div`
 
     ${media.tablet`
         height: 18rem;
+        margin: auto;
+    `}
+
+    ${media.desktop`
+        height: 30rem;
         margin: auto;
     `}
 `;

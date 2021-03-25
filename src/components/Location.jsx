@@ -8,11 +8,19 @@ const LocationSection = styled.section`
     display: flex;
     flex-direction: column;
 
+    ${media.desktop`
+        padding: 4.5rem 1.5rem;
+    `}
+
     p {
         font-family: 'Libre Baskerville', serif;
         line-height: 1.5rem;
         color: #222222;
         margin: 1rem;
+
+        ${media.desktop`
+            text-align: center;
+        `}
     }
 `;
 

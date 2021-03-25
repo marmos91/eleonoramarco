@@ -10,6 +10,11 @@ const RSVPSection = styled.section`
         margin: 3rem 8rem;
     `}
 
+    ${media.desktop`
+        width: 40%;
+        margin: 3rem auto;
+    `}
+
     h1 {
         font-family: 'Lato', sans-serif;
         text-transform: uppercase;

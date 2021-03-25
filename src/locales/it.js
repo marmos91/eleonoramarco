@@ -34,7 +34,7 @@ export default {
             }
         },
         accomodation: {
-            title: 'Accomodation',
+            title: 'Alloggi',
             locations: {
                 falco: {
                     title: 'Hotel Falco D\'Oro',

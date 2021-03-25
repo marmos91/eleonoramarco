@@ -44,6 +44,9 @@ const ScrollToLink = styled.a`
     color: white;
     cursor: pointer;
     text-decoration: none;
+    font-family: 'Lato', sans-serif;
+    font-size: .9rem;
+    font-weight: 300;
 `;
 
 export const MobileNavbar = (props) =>

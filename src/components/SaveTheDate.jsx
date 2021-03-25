@@ -3,6 +3,8 @@ import {useTranslation} from 'react-i18next';
 import styled from 'styled-components';
 import pieve from '../assets/images/pieve.jpg';
 
+import {media} from '../theme';
+
 const SaveTheDateSection = styled.section`
     color: white;
     height: 100vh;
@@ -20,10 +22,15 @@ const SaveTheDateSection = styled.section`
         font-family: 'Lato', sans-serif;
         text-transform: uppercase;
         font-size: 3.4rem;
+        line-height: 3.5rem;
         font-weight: 100;
         text-align: center;
         padding: 1rem;
-        line-height: 3.5rem;
+
+        ${media.desktop`
+            font-size: 3.6rem;
+            line-height: 3.8rem;
+        `}
     }
 
     h2 {
@@ -32,6 +39,11 @@ const SaveTheDateSection = styled.section`
         font-weight: 200;
         padding: 1rem;
         line-height: 1.5rem;
+
+        ${media.desktop`
+            font-size: 2rem;
+            line-height: 2rem;
+        `}
     }
 `;
 
