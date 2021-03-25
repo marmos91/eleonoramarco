@@ -1,9 +1,14 @@
 import React from "react"
 import {useTranslation} from "react-i18next";
+import {media} from '../theme';
 import styled from "styled-components";
 
 const RSVPSection = styled.section`
     padding: 2.5rem;
+
+    ${media.tablet`
+        margin: 3rem 8rem;
+    `}
 
     h1 {
         font-family: 'Lato', sans-serif;
@@ -13,14 +18,27 @@ const RSVPSection = styled.section`
         font-weight: 300;
         text-align: center;
         padding: 0 1rem;
+
+        ${media.tablet`
+            font-size: 1.8rem;
+            line-height: 1.6rem;
+            padding: 1.5rem 1rem;
+        `}
     }
 
     p {
         font-family: 'Libre Baskerville', serif;
+        font-size: .8rem;
         line-height: 1.5rem;
         color: #222222;
-        font-size: .8rem;
         padding: 1rem 0;
+
+        ${media.tablet`
+            font-size: 1rem;
+            line-height: 1.5rem;
+
+            padding: 1.5rem 0;
+        `}
     }
 `;
 
@@ -36,10 +54,18 @@ const RSVPForm = styled.form`
         box-sizing: border-box;
         text-align: center;
 
+        ${media.tablet`
+            height: 4rem;
+        `}
+
         ::placeholder {
             font-family: 'Lato', sans-serif;
             text-align: center;
             text-transform: uppercase;
+
+            ${media.tablet`
+                font-size: 1rem;
+            `}
         }
     }
 
@@ -51,6 +77,11 @@ const RSVPForm = styled.form`
         background: #85B5E1;
         text-transform: uppercase;
         margin: .3rem 0;
+
+        ${media.tablet`
+            height: 4rem;
+            font-size: 1rem;
+        `}
     }
 `;
 

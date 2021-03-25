@@ -1,5 +1,6 @@
 import React from "react";
 import styled from "styled-components";
+import {media} from '../theme';
 import stamp from '../assets/images/stamp.png';
 
 const FooterSection = styled.footer`
@@ -9,9 +10,17 @@ const FooterSection = styled.footer`
     justify-content: center;
     align-items: center;
 
+    ${media.tablet`
+        padding: 2rem 0;
+    `}
+
     img {
         width: 10rem;
         margin: 2rem;
+
+        ${media.tablet`
+            width: 15rem;
+        `}
     }
 
     span {
@@ -20,6 +29,11 @@ const FooterSection = styled.footer`
         font-size: .7rem;
         text-align: center;
         padding: .4rem 0;
+
+        ${media.tablet`
+            font-size: .9rem;
+            padding: .8rem 0;
+        `}
     }
 `;
 

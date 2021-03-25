@@ -1,5 +1,6 @@
 import React from "react";
 import {useTranslation} from "react-i18next";
+import {media} from '../theme';
 import styled from "styled-components";
 
 const LocationSection = styled.section`
@@ -16,9 +17,13 @@ const LocationSection = styled.section`
 `;
 
 const LocationDetails = styled.div`
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+    display: grid;
+    grid-template-columns: 1fr;
+
+    ${media.tablet`
+        margin: 3rem;
+        grid-template-columns: 1fr 1fr;
+    `}
 `;
 
 const LocationDetail = styled.div`
@@ -40,15 +45,28 @@ const LocationDetail = styled.div`
 
         color: #75C5B1;
         margin: 1rem;
+
+        ${media.tablet`
+            font-size: 1.5rem;
+            margin: 1.5rem;
+        `}
     }
 
     h2 {
         font-size: .9rem;
-        font-weight: 600
+        font-weight: 600;
+
+        ${media.tablet`
+            font-size: 1.1rem;
+        `}
     }
 
     span {
         font-size: .8rem;
+
+        ${media.tablet`
+            font-size: 1rem;
+        `}
     }
 `;
 

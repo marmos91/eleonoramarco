@@ -1,5 +1,6 @@
 import React from "react";
 import {useTranslation} from "react-i18next";
+import {media} from '../theme';
 import styled from "styled-components";
 import falco from '../assets/images/falco.jpg';
 import piana from '../assets/images/piana.jpg';
@@ -8,6 +9,10 @@ import {AccomodationCard} from "./AccomodationCard";
 const AccomodationSection = styled.section`
     background: #F9F9F9;
     padding: 2.5rem 0;
+
+    ${media.tablet`
+        padding: 2.5rem 0;
+    `}
 
     h1 {
         font-family: 'Lato', sans-serif;
@@ -22,7 +27,17 @@ const AccomodationSection = styled.section`
 const Accomodations = styled.div`
     display: grid;
     grid-template-columns: auto;
-    margin-top: 2rem;
+    align-items: center;
+    justify-content: center;
+
+    ${media.tablet`
+        grid-template-columns: 1fr 1fr;
+        column-gap: 2rem;
+
+        margin-top: 2rem;
+        box-sizing: border-box;
+        padding: 1rem;
+    `}
 `;
 
 export const Accomodation = () =>

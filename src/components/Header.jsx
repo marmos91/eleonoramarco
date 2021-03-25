@@ -1,6 +1,7 @@
 
 import React, {useEffect, useState, useRef} from "react";
 import styled from "styled-components";
+import {media} from '../theme';
 
 import {Navbar} from './Navbar';
 
@@ -11,6 +12,10 @@ const Brand = styled.h1`
     line-height: 2rem;
 
     color: white;
+
+    ${media.tablet`
+        font-weight: 300;
+    `}
 `;
 
 const HeaderSection = styled.header`
