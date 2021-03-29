@@ -14,7 +14,7 @@ var transporter = nodemailer.createTransport({
 var mail_options = {
     from: process.env.GMAIL_EMAIL,
     to: process.env.GMAIL_EMAIL,
-    // cc: process.env.CC_ENABLED === true ? 'eleonora.picotti@gmail.com' : undefined,
+    cc: (process.env.CC_ENABLED === true && process.env.GMAIL_EMAIL2) ? process.env.GMAIL_EMAIL2 : undefined,
     subject: '[Matrimonio] Nuova conferma ricevuta!'
 };
 
