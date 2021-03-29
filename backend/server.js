@@ -14,7 +14,7 @@ var transporter = nodemailer.createTransport({
 var mail_options = {
     from: process.env.GMAIL_EMAIL,
     to: process.env.GMAIL_EMAIL,
-    cc: (process.env.CC_ENABLED === true && process.env.GMAIL_EMAIL2) ? process.env.GMAIL_EMAIL2 : undefined,
+    cc: (process.env.CC_ENABLED === 'true' && process.env.GMAIL_EMAIL2) ? process.env.GMAIL_EMAIL2 : undefined,
     subject: '[Matrimonio] Nuova conferma ricevuta!'
 };
 
@@ -32,16 +32,24 @@ function confirm_to_text(confirm)
     return text;
 }
 
-const pool = new Pool({
+const pool_info = {
     connectionString: process.env.DATABASE_URL || 'postgresql://localhost:5432/marmos91',
-    ssl: process.env.DATABASE_URL ? true : false
-})
+    ssl: process.env.DATABASE_URL ? {
+        rejectUnauthorized: false,
+    } : false
+}
+const pool = new Pool(pool_info);
 
 const app = express();
 const port = process.env.PORT || 4444;
 
 app.use(cors());
 app.use(body_parser.json());
+
+app.get('/health', (_request, response) =>
+{
+    return response.sendStatus(200);
+});
 
 app.post('/confirm', async (request, response) =>
 {
