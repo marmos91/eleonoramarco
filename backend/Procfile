@@ -1,1 +1,1 @@
-main: npm start
+main: node ./server.js
