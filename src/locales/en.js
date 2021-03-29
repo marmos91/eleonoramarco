@@ -1,6 +1,6 @@
 export default {
     translation: {
-        welcome: '6TH JUNE - ANTICA PIEVE DI ROFFENO',
+        welcome: '5TH JUNE - ANTICA PIEVE DI ROFFENO',
         menu: {
             home: 'home',
             location: 'location',
@@ -14,7 +14,7 @@ export default {
         },
         save: {
             title: 'Save the date',
-            subtitle: '6th June 2021 - Antica Pieve di Roffeno'
+            subtitle: '5TH June 2021 - Antica Pieve di Roffeno'
         },
         location: {
             paragraph: 'The mountain has always been part of our passions. That\'s why we decided to celebrate our wedding together in the mountains of the Bolognese Apennines, just a few kilometers from Vergato.',

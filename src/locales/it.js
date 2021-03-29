@@ -1,6 +1,6 @@
 export default {
     translation: {
-        welcome: '06 GIUGNO - ANTICA PIEVE DI ROFFENO',
+        welcome: '05 GIUGNO - ANTICA PIEVE DI ROFFENO',
         success: 'Grazie per avercelo comunicato',
         error: {
             name: 'Per favore inserisci un nome e cognome valido',
@@ -20,7 +20,7 @@ export default {
         },
         save: {
             title: 'Save the date',
-            subtitle: '06 Giugno 2021 - Antica Pieve di Roffeno'
+            subtitle: '05 Giugno 2021 - Antica Pieve di Roffeno'
         },
         location: {
             paragraph: 'La montagna ha sempre fatto parte delle nostre passioni. Per questo abbiamo deciso di celebrare le nozze e di festeggiare insieme sulle montagne dell\'appennino Bolognese, a pochi chilometri da Vergato.',
