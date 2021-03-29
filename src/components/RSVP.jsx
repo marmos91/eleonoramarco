@@ -166,7 +166,7 @@ export const RSVP = (props) =>
 
         try
         {
-            const endpoint = process.env.NODE_ENV === 'development' ? 'http://localhost:4444' : 'https://eleomarco.herokuapp.com';
+            const endpoint = process.env.NODE_ENV === 'development' ? 'http://localhost:4444' : 'https://api.eleonoraemarco.it';
 
             const response = await fetch(`${endpoint}/confirm`, {
                 method: 'POST',
