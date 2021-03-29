@@ -13,27 +13,8 @@ const Nav = styled.div`
 
 export const Navbar = (props) =>
 {
-    const {t} = useTranslation();
-
-    const links = [{
-        name: t('menu.home'),
-        link: '#home',
-    }, {
-        name: t('menu.location'),
-        link: '#location',
-    }, {
-        name: t('menu.accomodation'),
-        link: '#accomodation',
-    }, {
-        name: t('menu.rsvp'),
-        link: '#rsvp',
-    }, {
-        name: t('menu.whishes'),
-        link: '#whishes',
-    }];
-
     return (<Nav>
-        <DesktopNavbar {...props} links={links} />
-        <MobileNavbar {...props} links={links} />
+        <DesktopNavbar {...props} />
+        <MobileNavbar {...props} />
     </Nav>);
 }

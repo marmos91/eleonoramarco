@@ -33,7 +33,7 @@ const HeaderSection = styled.header`
     background-color: ${props => props.open ? '#222' : 'transparent'};
 `;
 
-export const Header = () =>
+export const Header = (props) =>
 {
     const [open, set_open] = useState(false);
     const header_ref = useRef(null);
@@ -64,6 +64,6 @@ export const Header = () =>
 
     return (<HeaderSection open={open || scrolled} ref={header_ref} >
         <Brand>E & M</Brand>
-        <Navbar open={open} set_open={set_open} />
+        <Navbar open={open} set_open={set_open} {...props} />
     </HeaderSection>);
 }

@@ -1,4 +1,5 @@
-import React from 'react';
+import React, {useCallback} from 'react';
+import {useTranslation} from 'react-i18next';
 import styled from 'styled-components';
 import {media} from '../theme';
 
@@ -33,11 +34,15 @@ const ScrollToLink = styled.a`
 
 export const DesktopNavbar = (props) =>
 {
+    const {i18n} = useTranslation();
+
     const scroll = (event, hash) =>
     {
         event.preventDefault();
 
         props.set_open(false);
+
+        history.pushState({}, '', hash);
 
         const section = document.querySelector(hash);
 
@@ -51,9 +56,25 @@ export const DesktopNavbar = (props) =>
         </DesktopNavigationLink>
     ));
 
+    const toggle_language = () =>
+    {
+        if(i18n.language === 'it')
+            return '/en' + window.location.hash;
+
+        return '/' + window.location.hash;
+    };
+
+    const render_language_switcher = () =>
+    {
+        return (<DesktopNavigationLink>
+            <ScrollToLink href={toggle_language()}>{i18n.language === 'it' ? 'English version' : 'Versione italiana'}</ScrollToLink>
+        </DesktopNavigationLink>);
+    };
+
     return (<DesktopNav>
         <DesktopNavigation>
             {render_links()}
+            {render_language_switcher()}
         </DesktopNavigation>
     </DesktopNav>);
 }

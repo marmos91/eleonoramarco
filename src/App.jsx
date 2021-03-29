@@ -14,7 +14,7 @@ import {useTranslation} from 'react-i18next';
 
 function App()
 {
-    const {i18n} = useTranslation();
+    const {t, i18n} = useTranslation();
     const [translated, set_translated] = useState(false);
 
     const translate = useCallback(async () =>
@@ -40,6 +40,29 @@ function App()
 
     }, [translated, translate]);
 
+    const sections = [
+        {
+            name: t('menu.home'),
+            link: '#home',
+        },
+        {
+            name: t('menu.location'),
+            link: '#location',
+        },
+        {
+            name: t('menu.accomodation'),
+            link: '#accomodation',
+        },
+        {
+            name: t('menu.rsvp'),
+            link: '#rsvp',
+        },
+        // {
+        //     name: t('menu.whishes'),
+        //     link: '#whishes',
+        // }
+    ];
+
     return (<React.Fragment>
         <Helmet>
             <html lang='en' />
@@ -49,14 +72,14 @@ function App()
             <link href='https://fonts.googleapis.com/css2?family=Lato:wght@100;300;400&family=Libre+Baskerville:wght@400;700&display=swap' rel='stylesheet' />
         </Helmet>
         <React.Fragment>
-            <Header />
+            <Header links={sections} />
             <Hero />
             <Invite />
             <SaveTheDate />
             <Location />
             <Accomodation />
             <RSVP />
-            <Whishes disabled />
+            <Whishes disabled={sections[4] === undefined} />
             <Footer />
         </React.Fragment>
     </React.Fragment>);

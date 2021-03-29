@@ -1,6 +1,6 @@
 export default {
     translation: {
-        welcome: '06 GIUGNO - ANTICA PIEVE DI ROFFENO',
+        welcome: '6TH JUNE - ANTICA PIEVE DI ROFFENO',
         menu: {
             home: 'home',
             location: 'location',
@@ -14,21 +14,21 @@ export default {
         },
         save: {
             title: 'Save the date',
-            subtitle: '06 Giugno 2021 - Antica Pieve di Roffeno'
+            subtitle: '6th June 2021 - Antica Pieve di Roffeno'
         },
         location: {
-            paragraph: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque pharetra commodo viverra. Proin condimentum facilisis nibh eget ullamcorper. Sed dapibus nisi vel nisi vehicula consequat. Nulla congue eget eros non maximus.',
+            paragraph: 'The mountain has always been part of our passions. That\'s why we decided to celebrate our wedding together in the mountains of the Bolognese Apennines, just a few kilometers from Vergato.',
             cerimony: {
-                title: 'Cerimonia',
+                title: 'Cerimony',
                 location: 'Antica Pieve di Roffeno',
                 time: '4:30pm - 5:30pm',
                 address: 'Via Possessione, 85/2, 40030',
                 city: 'Cereglio, BO'
             },
             party: {
-                title: 'Ricevimento',
+                title: 'Party',
                 location: 'Agriturismo Antica Pieve',
-                time: '5:30pm - Tardi',
+                time: '5:30pm - Late',
                 address: 'Via Possessione, 85/2, 40030',
                 city: 'Cereglio, BO'
             }
@@ -38,28 +38,28 @@ export default {
             locations: {
                 falco: {
                     title: 'Hotel Falco D\'Oro',
-                    description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.'
+                    description: 'Large fully equipped hotel just 14 minutes from the ceremony location. Offers many rooms, breakfast and other services. The bride and groom are staying here.'
                 },
                 piana: {
                     title: 'Piana Dei Castagni',
-                    description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.'
+                    description: 'A farmhouse in the middle of nature that offers a few rooms in Bed and Breakfast style a few kilometers from the location of the ceremony.'
                 }
             }
         },
         rsvp: {
             title: 'rsvp',
-            paragraph: 'Non vediamo l’ora di festeggiare insieme a voi! Fateci sapere se riuscirete ad esserci.',
-            input: 'Nome e cognome',
-            email: 'email',
-            confirm: 'ci sarò',
-            not_confirm: 'non ci sarò',
-            submit: 'invia'
+            paragraph: 'We can\'t wait to celebrate with you! Let us know if you can be there.',
+            input: 'Full name',
+            email: 'Email',
+            confirm: 'I will be there',
+            not_confirm: 'I can\'t make it',
+            submit: 'Send'
         },
         whishes: {
-            title: 'Desideri',
-            p1: 'Sarebbe bello abbracciarsi ma per il momento non possiamo! Perciò ci accontentiamo, se vorrete, di un contributo per la nostra luna di miele.',
-            p2: 'Devolveremo buona parte dei soldi in beneficienza',
-            iban: 'Nome: Eleonora Picotti IBAN:'
+            title: 'Whishes',
+            p1: 'It would be nice to hug but for now we can\'t! So we will settle, if you would like, for a contribution to our honeymoon.',
+            p2: 'We will donate most of the money to charity',
+            iban: 'Name: Eleonora Picotti IBAN: <IBAN>'
         }
     }
 };
