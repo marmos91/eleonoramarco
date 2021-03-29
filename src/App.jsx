@@ -12,18 +12,23 @@ import {Whishes} from './components/Whishes';
 import {Footer} from './components/Footer';
 import {useTranslation} from 'react-i18next';
 
+function useQuery()
+{
+    return new URLSearchParams(window.location.search);
+}
+
 function App()
 {
     const {t, i18n} = useTranslation();
     const [translated, set_translated] = useState(false);
+    const query = useQuery();
+    const language = query.get('language');
 
     const translate = useCallback(async () =>
     {
-        const path = window.location.pathname;
-
-        switch(path)
+        switch(language)
         {
-            case '/en':
+            case 'en':
                 await i18n.changeLanguage('en');
                 break;
             default:
@@ -31,7 +36,7 @@ function App()
                 break;
         }
         set_translated(true);
-    }, [i18n, set_translated]);
+    }, [i18n, language, set_translated]);
 
     useEffect(() =>
     {

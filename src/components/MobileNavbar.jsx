@@ -77,7 +77,7 @@ export const MobileNavbar = (props) =>
     const toggle_language = () =>
     {
         if(i18n.language === 'it')
-            return '/en' + window.location.hash;
+            return '/?language=en' + window.location.hash;
 
         return '/' + window.location.hash;
     };
