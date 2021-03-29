@@ -32,10 +32,13 @@ function confirm_to_text(confirm)
     return text;
 }
 
-const pool = new Pool({
+const pool_info = {
     connectionString: process.env.DATABASE_URL || 'postgresql://localhost:5432/marmos91',
-    ssl: process.env.DATABASE_URL ? true : false
-})
+    ssl: process.env.DATABASE_URL ? {
+        rejectUnauthorized: false,
+    } : false
+}
+const pool = new Pool(pool_info);
 
 const app = express();
 const port = process.env.PORT || 4444;
@@ -106,4 +109,8 @@ app.post('/confirm', async (request, response) =>
     return response.sendStatus(201);
 });
 
-app.listen(port, () => console.log('Backend listening on port', port));
+app.listen(port, () =>
+{
+    console.log('Backend listening on port', port);
+    console.log('Postgres connected to', pool_info);
+});
