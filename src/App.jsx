@@ -55,7 +55,7 @@ function App()
             <SaveTheDate />
             <Location />
             <Accomodation />
-            <RSVP disabled />
+            <RSVP />
             <Whishes disabled />
             <Footer />
         </React.Fragment>

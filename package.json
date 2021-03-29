@@ -4,8 +4,13 @@
   "private": true,
   "homepage": "http://www.eleonoraemarco.it",
   "dependencies": {
+    "body-parser": "^1.19.0",
+    "cors": "^2.8.5",
+    "express": "4.17.1",
     "i18next": "^20.0.0",
     "i18next-browser-languagedetector": "^6.1.0",
+    "nodemailer": "^6.5.0",
+    "pg": "8.5.1",
     "react": "^17.0.1",
     "react-dom": "^17.0.1",
     "react-helmet": "^6.1.0",
@@ -18,8 +23,10 @@
     "styled-reset": "^4.3.4"
   },
   "scripts": {
+    "start:backend": "node backend/server.js",
     "start": "react-scripts start",
     "build": "react-scripts build",
+    "lint": "eslint",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
     "predeploy": "npm run build",

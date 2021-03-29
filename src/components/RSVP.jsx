@@ -1,4 +1,4 @@
-import React from "react"
+import React, {useCallback, useState} from "react"
 import {useTranslation} from "react-i18next";
 import {media} from '../theme';
 import styled from "styled-components";
@@ -52,29 +52,8 @@ const RSVPForm = styled.form`
     flex-direction: column;
     justify-content: center;
 
-    input {
-        height: 3rem;
-        margin: .3rem 0;
-        border: 1px solid #75C5B1;
-        box-sizing: border-box;
-        text-align: center;
-
-        ${media.tablet`
-            height: 4rem;
-        `}
-
-        ::placeholder {
-            font-family: 'Lato', sans-serif;
-            text-align: center;
-            text-transform: uppercase;
-
-            ${media.tablet`
-                font-size: 1rem;
-            `}
-        }
-    }
-
     button {
+        cursor: pointer;
         font-family: 'Lato', sans-serif;
         color: white;
         height: 2.8rem;
@@ -90,12 +69,13 @@ const RSVPForm = styled.form`
     }
 `;
 
-const FormSelect = styled.div`
+const FormSelectDiv = styled.div`
     display: flex;
     justify-content: space-between;
 `;
 
 const SelectButton = styled.button`
+    cursor: pointer;
     border: 1px solid #75C5B1 !important;
     box-sizing: border-box;
     width: 48%;
@@ -103,21 +83,139 @@ const SelectButton = styled.button`
     background-color: ${props => props.selected ? '#75C5B1' : 'transparent'} !important;
 `;
 
+const StyledInput = styled.input`
+    font-family: 'Lato', sans-serif;
+    height: 3rem;
+    margin: .3rem 0;
+    border: ${props => '2px solid ' + (props.error ? 'red' : '#75C5B1')};
+    box-sizing: border-box;
+    text-align: center;
+
+    ${media.tablet`
+        height: 4rem;
+    `}
+
+    ::placeholder {
+        font-family: 'Lato', sans - serif;
+        text-align: center;
+        text-transform: uppercase;
+
+        ${media.tablet`
+            font-size: 1rem;
+        `}
+    }
+`;
+
+const Status = styled.span`
+    display: ${props => props.show ? 'block' : 'none'};
+    margin-top: 2rem;
+    text-align: center;
+    font-family: 'Libre Baskerville', serif;
+    font-size: .9rem;
+
+    color: ${props => props.error ? 'red' : 'inherit'};
+`;
+
+const FormSelect = (props) =>
+{
+    const {t} = useTranslation();
+
+    const toggle = (event, confirm) =>
+    {
+        event.preventDefault();
+        props.on_change(confirm);
+    };
+
+    return (<FormSelectDiv>
+        <SelectButton selected={props.confirm} disabled={props.disabled} onClick={(event) => toggle(event, true)}>{t('rsvp.confirm')}</SelectButton>
+        <SelectButton selected={!props.confirm} disabled={props.disabled} onClick={(event) => toggle(event, false)}>{t('rsvp.not_confirm')}</SelectButton>
+    </FormSelectDiv>);
+}
+
 export const RSVP = (props) =>
 {
     const {t} = useTranslation();
+    const [name, set_name] = useState('');
+    const [email, set_email] = useState('');
+    const [confirm, set_confirm] = useState(true);
+    const [name_error, set_name_error] = useState(false);
+    const [email_error, set_email_error] = useState(false);
+    const [server_error, set_server_error] = useState(false);
+    const [status, set_status] = useState('');
+
+    const submit_form = useCallback(async (event) =>
+    {
+        event.preventDefault();
+
+        if(name === '')
+        {
+            set_status(t('error.name'));
+            set_name_error(true);
+            return false;
+        }
+
+        if(email === '')
+        {
+            set_status(t('error.email'));
+            set_email_error(true);
+            return false;
+        }
+
+        try
+        {
+            const response = await fetch('http://localhost:4444/confirm', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json'
+                },
+                body: JSON.stringify({
+                    name,
+                    email,
+                    confirm,
+                })
+            });
+
+            if(response.status !== 201)
+                throw new Error(`Wrong status ${response.status}`);
+
+            console.log('Request sent', response.statusText);
+            set_status(t('success'));
+        }
+        catch(error)
+        {
+            console.error(error);
+            set_status(t('error.server'));
+            set_server_error(true);
+        }
+
+        return false;
+    }, [name, email, set_name_error, confirm, set_email_error, t]);
+
+    const on_name_change = useCallback((event) =>
+    {
+        if(name_error)
+            set_name_error(false);
+
+        set_name(event.target.value);
+    }, [set_name_error, name_error, set_name]);
+
+    const on_email_change = useCallback((event) =>
+    {
+        if(email_error)
+            set_email_error(false);
+
+        set_email(event.target.value);
+    }, [set_email_error, email_error, set_email]);
 
     return (<RSVPSection id='rsvp'>
         <h1>{t('rsvp.title')}</h1>
         <p>{t('rsvp.paragraph')}</p>
-        <RSVPForm>
-            <input placeholder={t('rsvp.input')} disabled={props.disabled} />
-            <input placeholder={t('rsvp.email')} disabled={props.disabled} />
-            <FormSelect>
-                <SelectButton selected disabled={props.disabled}>{t('rsvp.confirm')}</SelectButton>
-                <SelectButton disabled={props.disabled}>{t('rsvp.not_confirm')}</SelectButton>
-            </FormSelect>
-            <button disabled={props.disabled}>{t('rsvp.submit')}</button>
+        <RSVPForm onSubmit={submit_form}>
+            <StyledInput placeholder={t('rsvp.input')} error={name_error} disabled={props.disabled} value={name} onChange={on_name_change} />
+            <StyledInput placeholder={t('rsvp.email')} error={email_error} disabled={props.disabled} value={email} onChange={on_email_change} />
+            <FormSelect on_change={set_confirm} confirm={confirm} />
+            <button disabled={props.disabled || name === '' || email === ''}>{t('rsvp.submit')}</button>
+            <Status show={status !== ''} error={name_error || email_error || server_error}>{status}</Status>
         </RSVPForm>
     </RSVPSection>);
 };
