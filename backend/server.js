@@ -43,6 +43,11 @@ const port = process.env.PORT || 4444;
 app.use(cors());
 app.use(body_parser.json());
 
+app.get('/health', (_request, response) =>
+{
+    return response.sendStatus(200);
+});
+
 app.post('/confirm', async (request, response) =>
 {
     const {name, email, confirm} = request.body;
