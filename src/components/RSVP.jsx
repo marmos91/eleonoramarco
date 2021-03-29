@@ -80,7 +80,7 @@ const SelectButton = styled.button`
     box-sizing: border-box;
     width: 48%;
     color: ${props => props.selected ? 'white' : '#75C5B1'} !important;
-    background-color: ${props => props.selected ? '#75C5B1' : 'transparent'} !important;
+    background-color: ${props => props.selected ? props.negative ? '#c57575' : '#75C5B1' : 'transparent'} !important;
 `;
 
 const StyledInput = styled.input`
@@ -113,7 +113,7 @@ const Status = styled.span`
     font-family: 'Libre Baskerville', serif;
     font-size: .9rem;
 
-    color: ${props => props.error ? 'red' : 'inherit'};
+    color: ${props => props.error ? 'red' : '#75C5B1'};
 `;
 
 const FormSelect = (props) =>
@@ -128,7 +128,7 @@ const FormSelect = (props) =>
 
     return (<FormSelectDiv>
         <SelectButton selected={props.confirm} disabled={props.disabled} onClick={(event) => toggle(event, true)}>{t('rsvp.confirm')}</SelectButton>
-        <SelectButton selected={!props.confirm} disabled={props.disabled} onClick={(event) => toggle(event, false)}>{t('rsvp.not_confirm')}</SelectButton>
+        <SelectButton negative={true} selected={!props.confirm} disabled={props.disabled} onClick={(event) => toggle(event, false)}>{t('rsvp.not_confirm')}</SelectButton>
     </FormSelectDiv>);
 }
 
@@ -146,6 +146,9 @@ export const RSVP = (props) =>
     const submit_form = useCallback(async (event) =>
     {
         event.preventDefault();
+
+        if(server_error)
+            set_server_error(false);
 
         if(name === '')
         {
@@ -189,23 +192,29 @@ export const RSVP = (props) =>
         }
 
         return false;
-    }, [name, email, set_name_error, confirm, set_email_error, t]);
+    }, [name, email, set_name_error, confirm, set_server_error, server_error, set_email_error, t]);
 
     const on_name_change = useCallback((event) =>
     {
+        if(server_error)
+            set_server_error(false);
+
         if(name_error)
             set_name_error(false);
 
         set_name(event.target.value);
-    }, [set_name_error, name_error, set_name]);
+    }, [set_name_error, name_error, server_error, set_server_error, set_name]);
 
     const on_email_change = useCallback((event) =>
     {
+        if(server_error)
+            set_server_error(false);
+
         if(email_error)
             set_email_error(false);
 
         set_email(event.target.value);
-    }, [set_email_error, email_error, set_email]);
+    }, [set_email_error, email_error, server_error, set_server_error, set_email]);
 
     return (<RSVPSection id='rsvp'>
         <h1>{t('rsvp.title')}</h1>

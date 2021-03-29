@@ -1,6 +1,7 @@
 export default {
     translation: {
         welcome: '06 GIUGNO - ANTICA PIEVE DI ROFFENO',
+        success: 'Grazie per avercelo comunicato',
         error: {
             name: 'Per favore inserisci un nome e cognome valido',
             email: 'Per favore inserisci una email valida',
