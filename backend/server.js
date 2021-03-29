@@ -109,8 +109,4 @@ app.post('/confirm', async (request, response) =>
     return response.sendStatus(201);
 });
 
-app.listen(port, () =>
-{
-    console.log('Backend listening on port', port);
-    console.log('Postgres connected to', pool_info);
-});
+app.listen(port, () => console.log('Backend listening on port', port));
