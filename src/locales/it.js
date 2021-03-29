@@ -23,7 +23,7 @@ export default {
             subtitle: '06 Giugno 2021 - Antica Pieve di Roffeno'
         },
         location: {
-            paragraph: 'La montagna ha sempre fatto delle nostre passioni. Per questo abbiamo deciso di celebrare le nozze e di festeggiare insieme sulle montagne dell\'appennino Bolognese, a pochi chilometri da Vergato.',
+            paragraph: 'La montagna ha sempre fatto parte delle nostre passioni. Per questo abbiamo deciso di celebrare le nozze e di festeggiare insieme sulle montagne dell\'appennino Bolognese, a pochi chilometri da Vergato.',
             cerimony: {
                 title: 'Cerimonia',
                 location: 'Antica Pieve di Roffeno',
