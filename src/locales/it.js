@@ -63,9 +63,9 @@ export default {
         },
         whishes: {
             title: 'Desideri',
-            p1: 'Sarebbe bello abbracciarsi ma per il momento non possiamo! Perciò ci accontentiamo, se vorrete, di un contributo per la nostra luna di miele.',
+            p1: 'Il pensiero più bello che possiate farci è essere con noi nel nostro grande giorno, ma se gradite farci un regalo, saremmo felici di un contributo per la nostra luna di miele',
             p2: 'Devolveremo buona parte dei soldi in beneficienza',
-            iban: 'Nome: Eleonora Picotti IBAN:'
+            name: 'Nome: {{name}}'
         }
     }
 };

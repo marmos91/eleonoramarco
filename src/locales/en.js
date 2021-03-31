@@ -57,9 +57,9 @@ export default {
         },
         whishes: {
             title: 'Whishes',
-            p1: 'It would be nice to hug but for now we can\'t! So we will settle, if you would like, for a contribution to our honeymoon.',
+            p1: 'The most beautiful thing you can do is being with us on our big day, but if you would like to include a gift, we will be happy with a contribution for our honeymoon.',
             p2: 'We will donate most of the money to charity',
-            iban: 'Name: Eleonora Picotti IBAN: <IBAN>'
+            name: 'Name: {{name}}'
         }
     }
 };

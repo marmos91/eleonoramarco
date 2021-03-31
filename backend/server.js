@@ -51,6 +51,14 @@ app.get('/health', (_request, response) =>
     return response.sendStatus(200);
 });
 
+app.get('/iban', (_request, response) =>
+{
+    return response.status(200).json({
+        name: process.env.NAME,
+        iban: process.env.IBAN
+    });
+});
+
 app.post('/confirm', async (request, response) =>
 {
     const {name, email, confirm} = request.body;

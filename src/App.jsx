@@ -62,10 +62,10 @@ function App()
             name: t('menu.rsvp'),
             link: '#rsvp',
         },
-        // {
-        //     name: t('menu.whishes'),
-        //     link: '#whishes',
-        // }
+        {
+            name: t('menu.whishes'),
+            link: '#whishes',
+        }
     ];
 
     return (<React.Fragment>
