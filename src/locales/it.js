@@ -53,7 +53,7 @@ export default {
             }
         },
         rsvp: {
-            title: 'rsvp (coming soon)',
+            title: 'rsvp',
             paragraph: 'Non vediamo l’ora di festeggiare insieme a voi! Fateci sapere se riuscirete ad esserci.',
             input: 'Nome e cognome',
             email: 'email',
