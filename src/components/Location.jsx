@@ -78,6 +78,21 @@ const LocationDetail = styled.div`
     }
 `;
 
+const LocationMap = styled.iframe`
+    margin: 2rem 0;
+    width: 100%;
+    height: 25rem;
+
+    ${media.tablet`
+        height: 40rem;
+    `}
+`;
+
+const Map = () =>
+{
+    return (<LocationMap src='https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d45689.46194347273!2d11.039103266232072!3d44.29779183547865!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x132ac6147aa297fb%3A0x4995f6089b745866!2sAgriturismo%20Antica%20Pieve!5e0!3m2!1sit!2sit!4v1617472436768!5m2!1sit!2sit' style={{border: 0}} allowFullScreen='' loading='lazy'></LocationMap>);
+};
+
 export const Location = () =>
 {
     const {t} = useTranslation();
@@ -86,19 +101,20 @@ export const Location = () =>
         <p>{t('location.paragraph')}</p>
         <LocationDetails>
             <LocationDetail>
-                <h1>{t('location.cerimony.title')}</h1>
+                <h1><a href='https://goo.gl/maps/DbLua7MWip2Z5HgB6'>{t('location.cerimony.title')}</a></h1>
                 <h2>{t('location.cerimony.location')}</h2>
                 <span>{t('location.cerimony.time')}</span>
                 <span>{t('location.cerimony.address')}</span>
                 <span>{t('location.cerimony.city')}</span>
             </LocationDetail>
             <LocationDetail>
-                <h1>{t('location.party.title')}</h1>
+                <h1><a href='https://goo.gl/maps/DbLua7MWip2Z5HgB6'>{t('location.party.title')}</a></h1>
                 <h2>{t('location.party.location')}</h2>
                 <span>{t('location.party.time')}</span>
                 <span>{t('location.party.address')}</span>
                 <span>{t('location.party.city')}</span>
             </LocationDetail>
         </LocationDetails>
+        <Map />
     </LocationSection>);
 }
