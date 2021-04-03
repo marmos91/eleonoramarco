@@ -3,6 +3,7 @@ import styled from "styled-components";
 import {Burger} from "./Burger";
 import {media} from '../theme';
 import {useTranslation} from "react-i18next";
+import {useQuery} from '../App';
 
 const MobileNav = styled.nav`
     display: block;
@@ -53,6 +54,8 @@ const ScrollToLink = styled.a`
 export const MobileNavbar = (props) =>
 {
     const {i18n} = useTranslation();
+    const query = useQuery();
+    const rsvp = query.get('rsvp');
 
     const scroll = (event, hash) =>
     {
@@ -76,10 +79,19 @@ export const MobileNavbar = (props) =>
 
     const toggle_language = () =>
     {
-        if(i18n.language === 'it')
-            return '/?language=en' + window.location.hash;
+        let url = new URL('/', window.location.href);
 
-        return '/' + window.location.hash;
+        if(rsvp)
+            url.searchParams.append('rsvp', rsvp);
+
+        if(i18n.language === 'it')
+            url.searchParams.append('language', 'en');
+        else
+            url.searchParams.delete('language');
+
+        url.hash = window.location.hash;
+
+        return url.toString();
     };
 
     const render_language_switcher = () =>
