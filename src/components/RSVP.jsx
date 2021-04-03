@@ -143,9 +143,6 @@ export const RSVP = (props) =>
     const [email_error, set_email_error] = useState(false);
     const [server_error, set_server_error] = useState(false);
     const [status, set_status] = useState('');
-    const query = useQuery();
-    const rsvp = query.get('rsvp');
-    const show = (rsvp === 'true');
 
     const submit_form = useCallback(async (event) =>
     {
@@ -222,7 +219,7 @@ export const RSVP = (props) =>
         set_email(event.target.value);
     }, [set_email_error, email_error, server_error, set_server_error, set_email]);
 
-    if(!show)
+    if(props.disabled)
         return (<></>);
 
     return (<RSVPSection id='rsvp'>
@@ -235,5 +232,6 @@ export const RSVP = (props) =>
             <button disabled={props.disabled || name === '' || email === ''}>{t('rsvp.submit')}</button>
             <Status show={status !== ''} error={name_error || email_error || server_error}>{status}</Status>
         </RSVPForm>
+        <p>{t('rsvp.paragraph2')}</p>
     </RSVPSection>);
 };

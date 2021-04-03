@@ -49,6 +49,7 @@ export default {
         rsvp: {
             title: 'rsvp',
             paragraph: 'We can\'t wait to celebrate with you! Let us know if you can be there.',
+            paragraph2: 'Unfortunately, due to the current situation, we ask you to come without a companion. If by chance the rules will change, we will be happy to welcome whoever you would like to bring.',
             input: 'Full name',
             email: 'Email',
             confirm: 'I will be there',

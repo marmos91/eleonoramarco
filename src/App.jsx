@@ -23,6 +23,7 @@ function App()
     const [translated, set_translated] = useState(false);
     const query = useQuery();
     const language = query.get('language');
+    const rsvp = query.get('rsvp');
 
     const translate = useCallback(async () =>
     {
@@ -57,16 +58,21 @@ function App()
         {
             name: t('menu.accomodation'),
             link: '#accomodation',
-        },
-        {
-            name: t('menu.rsvp'),
-            link: '#rsvp',
-        },
-        {
-            name: t('menu.whishes'),
-            link: '#whishes',
         }
     ];
+
+    if(rsvp === 'true')
+    {
+        sections.push({
+            name: t('menu.rsvp'),
+            link: '#rsvp',
+        });
+    }
+
+    sections.push({
+        name: t('menu.whishes'),
+        link: '#whishes',
+    });
 
     return (<React.Fragment>
         <Helmet>
@@ -83,8 +89,8 @@ function App()
             <SaveTheDate />
             <Location />
             <Accomodation />
-            <RSVP />
-            <Whishes disabled={sections[4] === undefined} />
+            <RSVP disabled={rsvp !== 'true'} />
+            <Whishes />
             <Footer />
         </React.Fragment>
     </React.Fragment>);

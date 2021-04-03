@@ -55,6 +55,7 @@ export default {
         rsvp: {
             title: 'rsvp',
             paragraph: 'Non vediamo l’ora di festeggiare insieme a voi! Fateci sapere se riuscirete ad esserci.',
+            paragraph2: 'Purtroppo, a causa della attuale situazione, vi chiediamo di venire senza accompagnatore. Se per caso le regole cambiassero saremo felici di accogliere chiunque vogliate portare.',
             input: 'Nome e cognome',
             email: 'email',
             confirm: 'ci sarò',
