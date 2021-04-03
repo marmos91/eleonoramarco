@@ -73,7 +73,7 @@ export const AccomodationCard = (props) =>
 {
     return (<StyledAccomodationCard>
         <AccomodationImage image={props.image} />
-        <h1>{props.title}</h1>
+        <h1><a href={props.link} >{props.title}</a></h1>
         <p>{props.description}</p>
     </StyledAccomodationCard>);
 }

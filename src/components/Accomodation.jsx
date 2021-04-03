@@ -56,8 +56,8 @@ export const Accomodation = () =>
     return (<AccomodationSection id='accomodation'>
         <h1>{t('accomodation.title')}</h1>
         <Accomodations>
-            <AccomodationCard title={t('accomodation.locations.falco.title')} description={t('accomodation.locations.falco.description')} image={falco} />
-            <AccomodationCard title={t('accomodation.locations.piana.title')} description={t('accomodation.locations.piana.description')} image={piana} />
+            <AccomodationCard title={t('accomodation.locations.falco.title')} link='https://www.booking.com/hotel/it/falco-d-oro-tole1.it.html' description={t('accomodation.locations.falco.description')} image={falco} />
+            <AccomodationCard title={t('accomodation.locations.piana.title')} link='https://www.booking.com/hotel/it/la-piana-dei-castagni.it.html' description={t('accomodation.locations.piana.description')} image={piana} />
         </Accomodations>
     </AccomodationSection>);
 }
