@@ -12,7 +12,7 @@ import {Whishes} from './components/Whishes';
 import {Footer} from './components/Footer';
 import {useTranslation} from 'react-i18next';
 
-function useQuery()
+export function useQuery()
 {
     return new URLSearchParams(window.location.search);
 }
