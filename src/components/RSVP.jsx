@@ -109,10 +109,10 @@ const StyledInput = styled.input`
 
 const Status = styled.span`
     display: ${props => props.show ? 'block' : 'none'};
-    margin-top: 2rem;
+    margin: 2rem;
     text-align: center;
     font-family: 'Libre Baskerville', serif;
-    font-size: .9rem;
+    font-size: 1rem;
 
     color: ${props => props.error ? 'red' : '#75C5B1'};
 `;
@@ -225,13 +225,18 @@ export const RSVP = (props) =>
     return (<RSVPSection id='rsvp'>
         <h1>{t('rsvp.title')}</h1>
         <p>{t('rsvp.paragraph')}</p>
-        <RSVPForm onSubmit={submit_form}>
-            <StyledInput placeholder={t('rsvp.input')} error={name_error} disabled={props.disabled} value={name} onChange={on_name_change} />
-            <StyledInput placeholder={t('rsvp.email')} error={email_error} disabled={props.disabled} value={email} onChange={on_email_change} />
-            <FormSelect on_change={set_confirm} confirm={confirm} />
-            <button disabled={props.disabled || name === '' || email === ''}>{t('rsvp.submit')}</button>
-            <Status show={status !== ''} error={name_error || email_error || server_error}>{status}</Status>
-        </RSVPForm>
+        {
+            status !== t('success') ?
+                <RSVPForm onSubmit={submit_form}>
+                    <StyledInput placeholder={t('rsvp.input')} error={name_error} disabled={props.disabled} value={name} onChange={on_name_change} />
+                    <StyledInput placeholder={t('rsvp.email')} error={email_error} disabled={props.disabled} value={email} onChange={on_email_change} />
+                    <FormSelect on_change={set_confirm} confirm={confirm} />
+                    <button disabled={props.disabled || name === '' || email === ''}>{t('rsvp.submit')}</button>
+                    <Status show={status !== ''} error={name_error || email_error || server_error}>{status}</Status>
+                </RSVPForm>
+                : <Status show={status !== ''} error={name_error || email_error || server_error}>{status}</Status>
+
+        }
         <p>{t('rsvp.paragraph2')}</p>
     </RSVPSection>);
 };
