@@ -2,8 +2,6 @@
 
 This is a simple project to host a custom website to give information about my wedding 🎉.
 
-You can see the final version [here](https://www.eleonoraemarco.it).
-
 ## The project
 
 The project is a simple React app built with [Create React App](https://create-react-app.dev).
