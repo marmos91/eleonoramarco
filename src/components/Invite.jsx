@@ -67,7 +67,7 @@ const InviteGrid = styled.div`
     }
 
     p {
-        margin: auto;
+        margin: 2rem auto;
         font-family: 'Libre Baskerville', serif;
         line-height: 1.5rem;
         color: #222222;
@@ -76,6 +76,10 @@ const InviteGrid = styled.div`
             font-size: 1.2rem;
             line-height: 1.8rem;
         `}
+
+        strong {
+            font-weight: bold;
+        }
     }
 `;
 
@@ -87,7 +91,10 @@ export const Invite = () =>
         <h1>{t('invite.title')}</h1>
         <InviteGrid>
             <img src={invite} />
-            <p>{t('invite.paragraph')}</p>
+            <div>
+                <p>{t('invite.paragraph')}</p>
+                <p><strong>{t('invite.paragraph2')}</strong></p>
+            </div>
         </InviteGrid>
     </InviteSection>);
 }

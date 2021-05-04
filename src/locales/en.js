@@ -11,6 +11,7 @@ export default {
         invite: {
             title: 'It’s happening, we’re tying the knot!',
             paragraph: 'We would like you all to come to the ceremony, but, seen the present situation, we don’t know if we will be able to host everybody or to reduce the number of partecipants. Anyway, we will let you know, as soon as we have an idea about what will happen.',
+            paragraph2: 'Please note: given the latest news regarding curfew, we have decided to move the ceremony and party forward to the morning!',
         },
         save: {
             title: 'Save the date',
@@ -19,16 +20,16 @@ export default {
         location: {
             paragraph: 'The mountain has always been part of our passions. That\'s why we decided to celebrate our wedding together in the mountains of the Bolognese Apennines, just a few kilometers from Vergato.',
             cerimony: {
-                title: 'Cerimony',
+                title: 'Cerimonia',
                 location: 'Antica Pieve di Roffeno',
-                time: '4:30pm - 5:30pm',
+                time: '11:30 - 13:00',
                 address: 'Via Possessione, 85/2, 40030',
                 city: 'Cereglio, BO'
             },
             party: {
-                title: 'Party',
+                title: 'Ricevimento',
                 location: 'Agriturismo Antica Pieve',
-                time: '5:30pm - Late',
+                time: '13:00 - 22:00',
                 address: 'Via Possessione, 85/2, 40030',
                 city: 'Cereglio, BO'
             }

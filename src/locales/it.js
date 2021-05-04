@@ -17,6 +17,7 @@ export default {
         invite: {
             title: 'Incredibile ma vero, ci sposiamo!',
             paragraph: 'Cari amici, ci piacerebbe avervi tutti alla cerimonia e al rinfresco, ma purtroppo, vista la situazione attuale non sappiamo bene cosa succederà o se dovremo ridurre il numero dei partecipanti. Vi terremo aggiornati qualsiasi cosa succeda.',
+            paragraph2: 'Attenzione: date le ultime novità riguardanti il coprifuoco, abbiamo deciso di anticipare la cerimonia e il ricevimento alla mattina!',
         },
         save: {
             title: 'Save the date',
@@ -27,14 +28,14 @@ export default {
             cerimony: {
                 title: 'Cerimonia',
                 location: 'Antica Pieve di Roffeno',
-                time: '4:30pm - 5:30pm',
+                time: '11:30 - 13:00',
                 address: 'Via Possessione, 85/2, 40030',
                 city: 'Cereglio, BO'
             },
             party: {
                 title: 'Ricevimento',
                 location: 'Agriturismo Antica Pieve',
-                time: '5:30pm - Tardi',
+                time: '13:00 - 22:00',
                 address: 'Via Possessione, 85/2, 40030',
                 city: 'Cereglio, BO'
             }
