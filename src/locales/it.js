@@ -45,11 +45,19 @@ export default {
             locations: {
                 falco: {
                     title: 'Hotel Falco D\'Oro',
-                    description: 'Ampio hotel attrezzato a soli 14 minuti dalla location della cerimonia. Offre molte stanze, colazione e altri servizi. Gli sposi alloggerano qui'
+                    description: 'Ampio hotel attrezzato a soli 14 minuti dalla location della cerimonia. Offre molte stanze, colazione e altri servizi.'
                 },
                 piana: {
                     title: 'Piana Dei Castagni',
                     description: 'Un agriturismo in mezzo alla natura che offre poche camere in stile Bed and Breakfast a pochi chilometri dal luogo della cerimonia.'
+                },
+                sapori: {
+                    title: 'Hotel Sapori',
+                    description: 'Immersa tra le verdi colline di Tolè, la struttura a conduzione familiare Albergo Sapori dispone di un ristorante e di camere con bagno interno, inoltre offre gratuitamente un parcheggio e la connessione WiFi.  Gli sposi alloggerano qui.'
+                },
+                fenice: {
+                    title: 'Agriturismo La Fenice',
+                    description: 'A 800 mt. s.l.m., tra Tolè e Rocca di Roffeno, si trova l\'agriturismo "La Fenice". Immersa nel verde armonioso delle colline, la costruzione, già presente nel XVI secolo, è stata premurosamente ristrutturata nel rispetto dei suoi caratteri originari.'
                 }
             }
         },

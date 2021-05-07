@@ -39,11 +39,19 @@ export default {
             locations: {
                 falco: {
                     title: 'Hotel Falco D\'Oro',
-                    description: 'Large fully equipped hotel just 14 minutes from the ceremony location. Offers many rooms, breakfast and other services. The bride and groom are staying here.'
+                    description: 'Large fully equipped hotel just 14 minutes from the ceremony location. Offers many rooms, breakfast and other services.'
                 },
                 piana: {
                     title: 'Piana Dei Castagni',
                     description: 'A farmhouse in the middle of nature that offers a few rooms in Bed and Breakfast style a few kilometers from the location of the ceremony.'
+                },
+                sapori: {
+                    title: 'Hotel Sapori',
+                    description: 'Nestled in the green hills of Tolè, the family-run Albergo Sapori features a restaurant and en suite rooms, and offers free parking and free WiFi.  The bride and groom are staying here.'
+                },
+                fenice: {
+                    title: 'Agriturismo La Fenice',
+                    description: 'At 800 meters above sea level, between Tolè and Rocca di Roffeno, is located the farmhouse "La Fenice". Surrounded by the harmonious green of the hills, the building, already present in the 16th century, has been carefully restored respecting its original features.'
                 }
             }
         },

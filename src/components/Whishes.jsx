@@ -82,7 +82,7 @@ export const Whishes = (props) =>
     return (<WhishesSection id='whishes'>
         <h1>{t('whishes.title')}</h1>
         <p>{t('whishes.p1')}</p>
-        <p>{t('whishes.p2')}</p>
+        {/* <p>{t('whishes.p2')}</p> */}
         <p>{t('whishes.name', {name})}</p>
         <p>IBAN: {iban}</p>
     </WhishesSection>);
