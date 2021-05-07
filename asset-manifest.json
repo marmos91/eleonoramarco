@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.js": "/static/js/main.9baafa16.chunk.js",
-    "main.js.map": "/static/js/main.9baafa16.chunk.js.map",
+    "main.js": "/static/js/main.5737808e.chunk.js",
+    "main.js.map": "/static/js/main.5737808e.chunk.js.map",
     "runtime-main.js": "/static/js/runtime-main.315027e3.js",
     "runtime-main.js.map": "/static/js/runtime-main.315027e3.js.map",
     "static/js/2.6e2313e2.chunk.js": "/static/js/2.6e2313e2.chunk.js",
@@ -9,15 +9,17 @@
     "index.html": "/index.html",
     "static/js/2.6e2313e2.chunk.js.LICENSE.txt": "/static/js/2.6e2313e2.chunk.js.LICENSE.txt",
     "static/media/falco.cf5f900f.jpg": "/static/media/falco.cf5f900f.jpg",
+    "static/media/fenice.97e0a751.jpg": "/static/media/fenice.97e0a751.jpg",
     "static/media/invite.d23db2f8.png": "/static/media/invite.d23db2f8.png",
     "static/media/murren.a70ed5f7.jpg": "/static/media/murren.a70ed5f7.jpg",
     "static/media/piana.eb86ebee.jpg": "/static/media/piana.eb86ebee.jpg",
     "static/media/pieve.4ce8a46a.jpg": "/static/media/pieve.4ce8a46a.jpg",
+    "static/media/sapori.092801b8.jpg": "/static/media/sapori.092801b8.jpg",
     "static/media/stamp.bf4fd7f3.png": "/static/media/stamp.bf4fd7f3.png"
   },
   "entrypoints": [
     "static/js/runtime-main.315027e3.js",
     "static/js/2.6e2313e2.chunk.js",
-    "static/js/main.9baafa16.chunk.js"
+    "static/js/main.5737808e.chunk.js"
   ]
 }
