@@ -94,6 +94,7 @@ export const Invite = () =>
             <div>
                 <p>{t('invite.paragraph')}</p>
                 <p><strong>{t('invite.paragraph2')}</strong></p>
+                <p><strong>{t('invite.paragraph3')}</strong></p>
             </div>
         </InviteGrid>
     </InviteSection>);

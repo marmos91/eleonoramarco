@@ -17,7 +17,8 @@ export default {
         invite: {
             title: 'Incredibile ma vero, ci sposiamo!',
             paragraph: 'Cari amici, ci piacerebbe avervi tutti alla cerimonia e al rinfresco, ma purtroppo, vista la situazione attuale non sappiamo bene cosa succederà o se dovremo ridurre il numero dei partecipanti. Vi terremo aggiornati qualsiasi cosa succeda.',
-            paragraph2: 'Attenzione: date le ultime novità riguardanti il coprifuoco, abbiamo deciso di anticipare la cerimonia e il ricevimento alla mattina!',
+            paragraph2: 'Attenzione: date le ultime novità riguardanti il coprifuoco, abbiamo deciso di anticipare la cerimonia e il pranzo alla mattina!',
+            paragraph3: 'Salvaguardiamo gli altri! Se presentate sintomi influenzali per favore rimanete a casa!',
         },
         save: {
             title: 'Save the date',

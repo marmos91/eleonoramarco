@@ -12,6 +12,7 @@ export default {
             title: 'It’s happening, we’re tying the knot!',
             paragraph: 'We would like you all to come to the ceremony, but, seen the present situation, we don’t know if we will be able to host everybody or to reduce the number of partecipants. Anyway, we will let you know, as soon as we have an idea about what will happen.',
             paragraph2: 'Please note: given the latest news regarding curfew, we have decided to move the ceremony and party forward to the morning!',
+            paragraph3: 'Let\'s be safe! If you are experiencing flu-like symptoms please stay home!',
         },
         save: {
             title: 'Save the date',
